@@ -1,0 +1,194 @@
+* {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#top_nav {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+#top_nav #left_side_nav {
+    position: relative;
+    /* background-color: green; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.contactMeBtn {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 10rem;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25)
+}
+
+.contactMeBtn:hover {
+    position: relative;
+    background-color: rgb(138, 138, 138);
+    color: black;
+    width: 10.5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+}
+
+#profilePic {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+body:has(.contactMeBtn:hover) #profilePic {
+    border-radius: 0%;
+}
+
+#top_nav #right_side_nav {
+    position: relative;
+    /* background-color: blue; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top_nav #right_side_nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: calc(14px + 0.6rem) 16px;
+    font-weight: bold;
+    font-size: 1vmax;
+    transition: all 0.2s ease-in-out;
+}
+
+#top_nav #right_side_nav a:hover {
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(124, 124, 124);
+    color: white;
+}
+
+#main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #mainRight {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main #mainLeft {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer {
+    position: relative;
+    height: 300px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer #Fcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+}
+
+#upperPart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: solid 1px rgb(156, 156, 156);
+}
+
+#bottomLogo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#bottomLogo img {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    filter: invert(50%);
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+#bottomLogo img:hover {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    filter: invert(0%);
+    padding: 10px 15px;
+}

@@ -130,7 +130,7 @@ body:has(.contactMeBtn:hover) #profilePic {
 }
 
 #main #mainRight div {
-    font-size: 8vmax;
+    font-size: 6vmax;
     font-weight: bold;
     line-height: 95%;
 }
@@ -292,4 +292,71 @@ body:has(.contactMeBtn:hover) #profilePic {
     width: 40px;
     filter: invert(0%);
     padding: 10px 15px;
+}
+
+#showTime {
+    position: relative;
+    display:flex;
+    height:100%;
+    width:100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clickMe {
+    position: relative;
+    color: white;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(139,0,0,1);
+    transition: all 1s ease-in-out;
+    transform: scale(1);
+    box-shadow: 10px 0px 50px 0px rgb(75, 75, 75);
+}
+
+#clickMe:hover[transfered=false] {
+    animation: showTime_Hover 1.2s ease-in-out infinite;
+}
+
+@keyframes showTime_Hover {
+    0% {
+        background-color: rgba(139,0,0,1);
+        transform: scale(1);
+    }
+    50% {
+        background-color: rgba(255,0,0,1);
+        transform: scale(1.2);
+    }
+    100% {
+        background-color: rgba(139,0,0,1);
+        transform: scale(1);
+    }
+}
+
+@keyframes enlargeAnim {
+    0% {
+        transform: scale(1);
+        position: relative;
+        border-radius: 100%;
+        z-index:1000;
+        color:white;
+    }
+    20% {
+        color:rgba(139,0,0,1);
+    }
+    100% {
+        transform: scale(100);
+        position: relative;
+        border-radius: 0;
+        z-index:1000;
+        color:rgba(139,0,0,1);
+    }
 }

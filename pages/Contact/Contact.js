@@ -1,0 +1,1 @@
+console.log('Education.js is running')
