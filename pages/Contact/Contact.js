@@ -11,7 +11,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
     };
 
-    fetch('https://script.google.com/macros/s/AKfycbzwM0DyhW3OGVpiM3Rv41WM1jaPcsf9D0JzCWfSlijwbyYsyJ0C0ezKiYbSHyMTn_acJw/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwBbflPNjPIj6sGdl4rFoJsNE1-f1lQIVVK1IWChmgm5xMffjZMfZlU8bMQlNEGayxqOw/exec', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
