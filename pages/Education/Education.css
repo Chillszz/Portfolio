@@ -7,7 +7,7 @@
 
 
 html, body {
-    height: auto;
+    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -117,35 +117,11 @@ body:has(.contactMeBtn:hover) #profilePic {
 
 #main {
     position: relative;
-    height: 100%;
+    height: calc(100vh - 4rem);
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-#main #mainRight {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#main #mainLeft {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 #footer {
     position: relative;
@@ -198,4 +174,55 @@ body:has(.contactMeBtn:hover) #profilePic {
     width: 40px;
     filter: invert(0%);
     padding: 10px 15px;
+}
+
+#educationPage {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#DHS, #CO {
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+#DHS:hover, #CO:hover {
+    position: relative;
+    transform: scale(1.5);
+}
+
+#educationPage:has(#DHS:hover) #DHSBack {
+    opacity: 1;
+}
+
+#educationPage:has(#CO:hover) #COBack {
+    opacity: 1;
+}
+
+#DHSBack {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('img/DRHS.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#COBack {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('img/correlation-one-s-global-headquarters.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
