@@ -108,6 +108,13 @@ body:has(.contactMeBtn:hover) #profilePic {
     color: white;
 }
 
+.selectedNav {
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(124, 124, 124);
+    color: white !important;
+}
+
 #main {
     position: relative;
     height: 100%;
