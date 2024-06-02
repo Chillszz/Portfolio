@@ -7,7 +7,7 @@
 
 
 html, body {
-    height: 100vh;
+    height: auto;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -119,32 +119,10 @@ body:has(.contactMeBtn:hover) #profilePic {
     position: relative;
     height: 100%;
     width: 100%;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#main #mainRight {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-}
-
-#main #mainLeft {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 #footer {
@@ -198,4 +176,93 @@ body:has(.contactMeBtn:hover) #profilePic {
     width: 40px;
     filter: invert(0%);
     padding: 10px 15px;
+}
+
+#PageTitle {
+    position: relative;
+    padding: 2vmax;
+    font-size: 3.5vmax;
+    font-weight: bolder;
+}
+
+.Clogo {
+    position: relative;
+    height: 1vmax;
+}
+
+section {
+    /* outline: dashed 3px red; */
+    position: relative;
+    height: 10vmax;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: solid 2px rgb(172, 172, 172);
+    border-radius: 1.5vmax;
+    margin: 1vmax 0px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.Pheader {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    /* outline: dashed 3px red; */
+}
+
+.Ptitle, .Companies {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* outline: dashed 3px red; */
+}
+
+.Ptitle {
+    text-align: left;
+    padding: 0px 5vmax;
+    font-size: 1.5vmax;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.Companies {
+    justify-content: end;
+    padding: 0px 7vmax;
+}
+
+.Pdesc {
+    position:relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* outline: dashed 3px red;
+    background-color: aqua; */
+}
+
+.Pdesc div.dates {
+    position:relative;
+    width: 100%;
+    height: auto;
+    /* outline: dashed 3px red; */
+    text-align: left;
+    padding-left: 10vmax;
+}
+
+.Pdesc div.desc {
+    position:relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    /* outline: dashed 3px red; */
+    padding: 0px 5vmax;
+    font-size: 1.1vmax;
 }
