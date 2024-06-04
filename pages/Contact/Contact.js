@@ -39,8 +39,18 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
                     ]
                 }]
             }),
-        }).then(resp => resp.json())
-        .then(resp => {
-            alert('Sent! Please allow me to response within 24 hours')
-        })
+        }).then(
+            resp => {
+                if(resp.status >= 200) {
+                    alert('Sent! Please allow me to response within 24 hours')
+                    first = ''
+                    second = ''
+                    email = ''
+                    message = ''
+                } else {
+                    alert('Something went wrong :(')
+                }
+                
+            }
+        )
 });
