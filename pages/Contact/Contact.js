@@ -1,33 +1,44 @@
 console.log('Education.js is running')
 
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const formData = {
-        first_name: document.getElementById('firstname').value,
-        last_name: document.getElementById('lastname').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-
-    };
-
-    fetch('https://script.google.com/macros/s/AKfycbwBbflPNjPIj6sGdl4rFoJsNE1-f1lQIVVK1IWChmgm5xMffjZMfZlU8bMQlNEGayxqOw/exec', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === 'success') {
-            alert('Form submitted successfully!');
-        } else {
-            alert('Error submitting form');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error submitting form');
-    });
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    fetch(
+        'https://discord.com/api/webhooks/1247409368148742156/ZaiAuhLPGWXKk1kwIEQ6P4ngGjse2U9bMqDYIcbFzmyJ769emBIXhMJOm_SSObJR1I0I',
+        {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                // the username to be displayed
+                username: 'Portfolio Receiver',
+                // the avatar to be displayed
+                avatar_url:
+                    'https://cdn-icons-png.freepik.com/512/4711/4711987.png',
+                // contents of the message to be sent
+                content:
+                    '<@.chillsz>',
+                "embeds": [{
+                    "fields": [
+                        {
+                            "name": "Cat",
+                            "value": "Hi! :wave:",
+                            "inline": true
+                        },
+                        {
+                            "name": "Dog",
+                            "value": "hello!",
+                            "inline": true
+                        },
+                        {
+                            "name": "Cat",
+                            "value": "wanna play? join to voice channel!"
+                        },
+                        {
+                            "name": "Dog",
+                            "value": "yay"
+                        }
+                    ]
+                }]
+            }),
+        })
 });
