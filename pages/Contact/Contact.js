@@ -43,10 +43,12 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
             resp => {
                 if(resp.status >= 200) {
                     alert('Sent! Please allow me to response within 24 hours')
-                    first = ''
-                    second = ''
-                    email = ''
-                    message = ''
+                    setTimeout(() => {
+                        first = ''
+                        second = ''
+                        email = ''
+                        message = ''
+                    },1500)
                 } else {
                     alert('Something went wrong :(')
                 }
