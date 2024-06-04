@@ -1,6 +1,7 @@
 console.log('Contact.js is running')
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
     let first = document.getElementById('firstname').value,
     second = document.getElementById('lastname').value,
     email = document.getElementById('email').value,
