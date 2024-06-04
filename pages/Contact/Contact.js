@@ -1,4 +1,4 @@
-console.log('Education.js is running')
+console.log('Contact.js is running')
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     fetch(
