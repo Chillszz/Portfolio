@@ -1,8 +1,11 @@
 console.log('Contact.js is running')
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
-    fetch(
-        'https://discord.com/api/webhooks/1247409368148742156/ZaiAuhLPGWXKk1kwIEQ6P4ngGjse2U9bMqDYIcbFzmyJ769emBIXhMJOm_SSObJR1I0I',
+    let first = document.getElementById('firstname').value,
+    second = document.getElementById('lastname').value,
+    email = document.getElementById('email').value,
+    message = document.getElementById('message').value
+    fetch('https://discord.com/api/webhooks/1247409368148742156/ZaiAuhLPGWXKk1kwIEQ6P4ngGjse2U9bMqDYIcbFzmyJ769emBIXhMJOm_SSObJR1I0I',
         {
             method: 'post',
             headers: {
@@ -12,30 +15,25 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
                 // the username to be displayed
                 username: 'Portfolio Receiver',
                 // the avatar to be displayed
-                avatar_url:
-                    'https://cdn-icons-png.freepik.com/512/4711/4711987.png',
+                avatar_url: 'https://cdn-icons-png.freepik.com/512/4711/4711987.png',
                 // contents of the message to be sent
-                content:
-                    '<@.chillsz>',
-                "embeds": [{
+                content: '<@370652009944186881>',
+                allowed_mentions : { "parse": ["everyone"]  },
+                embeds: [{
                     "fields": [
                         {
-                            "name": "Cat",
-                            "value": "Hi! :wave:",
+                            "name": "Full Name",
+                            "value": `${second}, ${first}`,
                             "inline": true
                         },
                         {
-                            "name": "Dog",
-                            "value": "hello!",
+                            "name": "Email",
+                            "value": `${email}`,
                             "inline": true
                         },
                         {
-                            "name": "Cat",
-                            "value": "wanna play? join to voice channel!"
-                        },
-                        {
-                            "name": "Dog",
-                            "value": "yay"
+                            "name": "Message",
+                            "value": `${message}`
                         }
                     ]
                 }]
