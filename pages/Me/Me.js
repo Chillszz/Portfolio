@@ -23,6 +23,29 @@ document.body.onload = () => {
         ]; 
         displaySubtitles(subtitles);
     });
+
+    document.getElementById('link').addEventListener("animationend", () => {
+        document.querySelector('#bp').style.left = "0vw";
+        setTimeout(() => {
+            document.querySelectorAll('.imgs').forEach(img => {
+                if(img.getAttribute('started') == 'false') {
+                    img.setAttribute('started','true')
+                }
+            })
+            setTimeout(() => {
+                document.querySelectorAll('.imgs').forEach(img => {
+                    if(img.getAnimations()[0].animationName == 'rightside') {
+                        img.style.animation = 'rightsideback 1s forwards ease-in-out'
+                    } else {
+                        img.style.animation = 'leftsideback 1s forwards ease-in-out'
+                    }
+                })
+                setTimeout(() => {
+                    document.querySelector('#phimg').style.filter = "none"
+                },1000)
+            },6500)
+        },1000)
+    })
 }
 
 function displaySubtitles(subtitles) {
@@ -56,3 +79,5 @@ function displaySubtitles(subtitles) {
     
     showSubtitle();
 }
+
+
