@@ -26,6 +26,7 @@ document.body.onload = () => {
 
     document.getElementById('link').addEventListener("animationend", () => {
         document.querySelector('#bp').style.left = "0vw";
+        document.querySelector('.wave').style.transform = 'scale(2)';
         setTimeout(() => {
             document.querySelectorAll('.imgs').forEach(img => {
                 if(img.getAttribute('started') == 'false') {
@@ -42,10 +43,75 @@ document.body.onload = () => {
                 })
                 setTimeout(() => {
                     document.querySelector('#phimg').style.filter = "none"
+                    setTimeout(() => {
+                        document.querySelector('#phimg').style.transform = 'translateY(100vh)'
+                        document.querySelector('#usa').style.transform = 'translateY(100vh)'
+                        setTimeout(() => {
+                            document.querySelector('#bp').style.left = '100vw'
+                            document.querySelector('#current').style.left = '100vw'
+                            document.querySelector('.wave').style.transform = 'scale(1)'
+                            setTimeout(() => {
+                                careeranim()
+                            },1000)
+                        },4000)
+                    },1000)
                 },1000)
-            },6500)
+            },3000)
         },1000)
     })
+}
+function careeranim() {
+    let boy = document.getElementById('boy'),
+    jslogo = document.getElementById('js'),
+    htmllogo = document.getElementById('html'),
+    csslogo = document.getElementById('css'),
+    pythonlogo = document.getElementById('python'),
+    sqllogo = document.getElementById('sql'),
+    cslogo = document.getElementById('cs')
+
+    boy.style.opacity = '1'
+    boy.style.height = '10vmax'
+    setTimeout(() => {
+        boy.style.transform = 'translateY(5vmax)'
+        boy.style.height = '5vmax'
+        setTimeout(() => {
+            jslogo.style.transform = 'translateY(-30vh) translateX(-25vw)'
+            jslogo.style.opacity = '1'
+            setTimeout(() => {
+                htmllogo.style.transform = 'translateY(-30vh) translateX(-15vw)'
+                htmllogo.style.opacity = '1'
+                setTimeout(() => {
+                    csslogo.style.transform = 'translateY(-30vh) translateX(-5vw)'
+                    csslogo.style.opacity = '1'
+                    setTimeout(() => {
+                        pythonlogo.style.transform = 'translateY(-30vh) translateX(5vw)'
+                        pythonlogo.style.opacity = '1'
+                        setTimeout(() => {
+                            sqllogo.style.transform = 'translateY(-30vh) translateX(15vw)'
+                            sqllogo.style.opacity = '1'
+                            setTimeout(() => {
+                                cslogo.style.transform = 'translateY(-30vh) translateX(25vw)'
+                                cslogo.style.opacity = '1'
+                                setTimeout(() => {
+                                    document.querySelectorAll('.logo').forEach(item => {
+                                        item.style.height = '6vmax'
+                                        setTimeout(() => {
+                                            item.style.animation = 'disappear 0.5s forwards ease-in-out'  
+                                        },300)
+                                    })
+                                    boy.style.height = '11vmax'
+                                    setTimeout(() => {
+                                        boy.style.animation = 'disappear 0.5s forwards ease-in-out'  
+                                    },300)
+                                },1000)
+                            },500)
+                        },500)
+                    },500)
+                },500)
+            },500)
+        },1000)
+    },1000)
+
 }
 
 function displaySubtitles(subtitles) {

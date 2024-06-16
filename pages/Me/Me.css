@@ -129,6 +129,14 @@ section {
     }
 }
 
+.wave {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    transform: scale(1);
+    transition: all 0.1s ease-in-out;
+}
+
 img {
     max-width: 100%; /* Ensures the image scales within the container */
     height: auto; /* Maintains the image aspect ratio */
@@ -143,7 +151,7 @@ img {
     transition: all 1s ease-in-out;
 }
 
-#imgcont {
+.imgcont {
     position: relative;
     display: flex;
     height: fit-content;
@@ -152,6 +160,7 @@ img {
     align-items: center;
     justify-content: center;
     /* background-color: aqua; */
+    filter: drop-shadow(-10px 10px 4px #494949);
 }
 
 img.imgs:not(:first-of-type) {
@@ -164,7 +173,7 @@ img.imgs:not(:first-of-type) {
 #phimg {
     position: relative;
     mask-image: url('img/ph.svg');
-    background-color: black;
+    background-color: rgb(54, 173, 60);
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -307,3 +316,61 @@ img.imgs:not(:first-of-type) {
     }
 }
 
+#current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    top: -100vh;
+    transition: all 1s ease-in-out;
+}
+
+#usa {
+    position: relative;
+    mask-image: url('img/USA.png');
+    background-color: rgb(54, 173, 60);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    z-index: 5;
+    height: 70vh;
+    transition: all 1s ease-in-out;
+    /* filter: brightness(0) contrast(100%); */
+}
+
+#career {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(255, 0, 0); */
+    transition: all 1s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+#boy {
+    position: absolute;
+    height: 0vmax;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    filter: drop-shadow(-10px 10px 4px #494949);
+}
+
+.logo {
+    position: absolute;
+    opacity: 0;
+    height: 5vmax;
+    transition: all 0.3s ease-out;
+    transform: translateY(5vmax);
+    filter: drop-shadow(-10px 10px 4px #494949);
+}
+
+@keyframes disappear {
+    0% {
+        height: 6vmax;
+    }
+    100% {
+        height: 0vmax;
+        opacity: 0;
+    }
+}
